@@ -1,0 +1,32 @@
+============================================================
+Worked Input-to-Output Explanation (Token-Budget Preflight)
+============================================================
+1. Input String: 'one two three four'
+2. Configured Budget: 3
+3. Tokenization Step: Whitespace split produces 4 tokens: ['one', 'two', 'three', 'four']
+4. Length Comparison: Total tokens (4) > Budget (3) -> Truncation needed.
+5. Slicing Step: Retain first 3 tokens: tokens[:3] = ['one', 'two', 'three']
+6. Truncation Report: Discarded 1 token(s): ['four']
+7. Output: Retained = ['one', 'two', 'three'], Removed Count = 1
+8. Note: Teaching approximation: local whitespace tokenizer only. Not a real model tokenizer (BPE/WordPiece/SentencePiece).
+============================================================
+
+Structured JSON Result:
+{
+  "input_text": "one two three four",
+  "budget": 3,
+  "total_tokens": 4,
+  "retained_tokens": [
+    "one",
+    "two",
+    "three"
+  ],
+  "removed_tokens": [
+    "four"
+  ],
+  "removed_count": 1,
+  "is_truncated": true,
+  "disclaimer": "Teaching approximation: local whitespace tokenizer only. Not a real model tokenizer (BPE/WordPiece/SentencePiece)."
+}
+
+Wrote execution evidence to: /Users/tanishka/.gemini/antigravity/scratch/AI-For-Beginners/work/R38-T036/example_run.txt

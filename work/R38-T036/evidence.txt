@@ -1,0 +1,22 @@
+Task ID: R38-T036
+Description: Token-budget preflight — worked example with checks [lessons/5-NLP/13-TextRep]
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/5-NLP/13-TextRep/applied-labs/r38-t036 -p "test_*.py" -v
+
+Canonical Fixture & Results:
+- Input Text: "one two three four"
+- Configured Budget: 3
+- Retained Tokens: ["one", "two", "three"] (PASS)
+- Removed Count: 1 (PASS)
+- Truncated Tokens: ["four"] (PASS)
+- Empty Input (""): Retained = [], Removed = 0 (PASS)
+- Negative Budget (-1): ValueError raised (PASS)
+
+Teaching Disclaimer:
+- Explicitly labeled: "Teaching approximation: local whitespace tokenizer only. Not a real model tokenizer (BPE/WordPiece/SentencePiece)."
+
+Test Suite Execution:
+Ran 12 tests in 0.001s
+Status: PASS (0 failures, 0 errors)
+Deliberate Wrong Result Test: Verified failure via AssertionError in test_deliberate_wrong_result_fails.
