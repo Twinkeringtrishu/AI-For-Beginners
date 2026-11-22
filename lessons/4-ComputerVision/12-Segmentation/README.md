@@ -64,3 +64,20 @@ This [wikipedia article](https://wikipedia.org/wiki/Image_segmentation) offers a
 ## [Assignment](lab/README.md)
 
 In this lab, try **human body segmentation** using [Segmentation Full Body MADS Dataset](https://www.kaggle.com/datasets/tapakah68/segmentation-full-body-mads-dataset) from Kaggle.
+
+## Applied Lab: Segmentation-Mask Overlap — Compare Two Approaches (R38-T033)
+
+An applied concept example demonstrating per-class Intersection-over-Union (IoU) calculation comparing direct boolean masking with contingency matrix analysis, including an explicit absent-class policy, is available in [applied-labs/r38-t033/example.py](applied-labs/r38-t033/example.py) and documented in [applied-labs/r38-t033/README.md](applied-labs/r38-t033/README.md).
+
+- **Scope & Limitations**: Educational concept demonstration using the Python standard library. Evaluates discrete integer masks without GPU or external framework dependencies.
+- **Fixture**:
+  - Truth: `[0, 1, 1, 0]`, Prediction: `[0, 1, 0, 0]`
+  - Class 0: $\text{IoU} = 2/3 \approx 0.6667$
+  - Class 1: $\text{IoU} = 1/2 = 0.5000$
+  - Class absent from both: returns `None` (`ABSENT_CLASS_SENTINEL`)
+- **Invocation**:
+  ```bash
+  python3 lessons/4-ComputerVision/12-Segmentation/applied-labs/r38-t033/example.py
+  python3 -m unittest discover -s lessons/4-ComputerVision/12-Segmentation/applied-labs/r38-t033 -p "test_*.py"
+  ```
+

@@ -1,0 +1,19 @@
+Task ID: R38-T033
+Description: Calculate per-class intersection/union from two small integer label masks, with an explicit policy for classes absent from both. Compare two approaches.
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/4-ComputerVision/12-Segmentation/applied-labs/r38-t033 -p "test_*.py"
+
+Canonical Fixture & Results:
+- Truth: [0, 1, 1, 0]
+- Prediction: [0, 1, 0, 0]
+- Class 0: Expected IoU = 2/3 (0.6667), Actual = 0.6667 (PASS)
+- Class 1: Expected IoU = 1/2 (0.5000), Actual = 0.5000 (PASS)
+- Class 2 (absent from both): Expected = None, Actual = None (PASS)
+
+Approach Comparison:
+- Approach 1 (Direct Boolean Masking) vs Approach 2 (Contingency Table TP/(TP+FP+FN)): 100% Mathematically Equivalent
+
+Test Suite Execution:
+Ran 12 tests in 0.000s
+Status: PASS (0 failures, 0 errors)

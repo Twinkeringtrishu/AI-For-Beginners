@@ -1,0 +1,21 @@
+======================================================================
+R38-T033: Segmentation-Mask Overlap — Compare Two Approaches
+======================================================================
+
+--- Canonical Fixture ---
+Ground Truth : [0, 1, 1, 0]
+Prediction   : [0, 1, 0, 0]
+Classes      : [0, 1, 2] (0: background, 1: object, 2: absent class)
+
+--- Approach 1: Direct Set/Mask Calculation ---
+  Class 0: IoU = 0.6667
+  Class 1: IoU = 0.5000
+  Class 2: IoU = None (absent sentinel)
+
+--- Approach 2: Contingency (TP/(TP+FP+FN)) Calculation ---
+  Class 0: IoU = 0.6667
+  Class 1: IoU = 0.5000
+  Class 2: IoU = None (absent sentinel)
+
+Mathematical Equivalence Verified: True
+Mean IoU (active classes 0 & 1)  : 0.5833
