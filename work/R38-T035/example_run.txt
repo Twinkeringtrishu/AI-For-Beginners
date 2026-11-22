@@ -1,0 +1,2 @@
+Hello Alice! Your topic is templating.
+Hello Bob {the builder}! Your topic is {{magic}}.

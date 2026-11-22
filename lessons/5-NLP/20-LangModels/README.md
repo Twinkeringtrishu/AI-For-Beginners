@@ -51,3 +51,31 @@ Continue your learning in the following notebooks:
 New general pre-trained language models do not only model language structure, but also contain vast amount of natural language. Thus, they can be effectively used to solve some NLP tasks in zero-shop or few-shot settings.
 
 ## [Post-lecture quiz](https://ff-quizzes.netlify.app/en/ai/quiz/40)
+
+## Applied Lab – R38‑T035: Template rendering with validation
+
+This lab shows a tiny, safe template renderer that validates placeholders, rejects unknown or missing keys, and keeps user‑provided data separate from the instruction fields.  Braces inside user values are treated literally.
+
+**Invocation**
+```bash
+python3 lessons/5-NLP/20-LangModels/applied-labs/r38-t035/example.py
+```
+The script prints the rendered string.
+
+**Test suite**
+```bash
+python3 -m unittest discover -s lessons/5-NLP/20-LangModels/applied-labs/r38-t035 -p "test_*.py"
+```
+The suite includes:
+- a canonical render test (`{{name}}` and `{{topic}}`),
+- missing‑placeholder detection,
+- unknown‑key detection,
+- literal‑brace handling, and
+- a deliberately failing test that expects the wrong output (to demonstrate failure handling).
+
+**Evidence** is stored under `work/R38-T035/`:
+- `example_run.txt` – script output,
+- `test_run.txt` – unittest output (including the intentional failure),
+- `evidence.txt` – summary of the run, Python version, and Git commit.
+
+*The implementation uses only the Python standard library; no external packages, GPUs, or cloud services are required.*

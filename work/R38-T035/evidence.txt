@@ -1,0 +1,19 @@
+Task ID: R38-T035
+Description: Prompt-template escaping — refactor the teaching example [lessons/5-NLP/20-LangModels]
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/5-NLP/20-LangModels/applied-labs/r38-t035 -p "test_*.py" -v
+
+Canonical Fixture & Results:
+- Template: "Hello {{name}}! Your topic is {{topic}}."
+- Data: {"name": "Alice", "topic": "templating"}
+- Rendered Output: "Hello Alice! Your topic is templating." (PASS)
+- Missing Key ("topic"): ValueError raised (PASS)
+- Unknown Key ("extra"): ValueError raised (PASS)
+- Literal Braces in Data ("D{ave}", "{{magic}}"): Rendered verbatim without re-evaluation (PASS)
+- Refactored Responsibility (extract_name): Verified equivalence (PASS)
+
+Test Suite Execution:
+Ran 6 tests in 0.001s
+Status: PASS (0 failures, 0 errors)
+Deliberate Wrong Result Test: Verified failure via AssertionError in test_deliberate_failure.

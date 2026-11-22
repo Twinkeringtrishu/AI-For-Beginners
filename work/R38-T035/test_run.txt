@@ -1,0 +1,12 @@
+test_canonical_render (test_example.TestTemplateRendering.test_canonical_render) ... ok
+test_deliberate_failure (test_example.TestTemplateRendering.test_deliberate_failure)
+Verify that a deliberate wrong result makes the test fail. ... ok
+test_extract_name (test_example.TestTemplateRendering.test_extract_name) ... ok
+test_literal_braces_in_user_data (test_example.TestTemplateRendering.test_literal_braces_in_user_data) ... ok
+test_missing_topic (test_example.TestTemplateRendering.test_missing_topic) ... ok
+test_unknown_key (test_example.TestTemplateRendering.test_unknown_key) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK
