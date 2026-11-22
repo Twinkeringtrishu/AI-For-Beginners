@@ -1,0 +1,28 @@
+======================================================================
+R38-T032: Single Perceptron Update Boundary-Case Lesson Extension
+======================================================================
+
+--- 1. Canonical Stated Contract Execution ---
+Initial State : weights=(0.0, 0.0), bias=0.0, learning_rate=1.0
+Input Sample  : x=[1, 2], target=1
+Forward Pass  : score = 0.0000
+Tie Rule Dec. : score <= 0 -> prediction = 0
+Error & Delta : error = target - pred = 1, delta = 1.0
+Updated State : weights = (1.0, 2.0), bias = 1.0
+
+--- 2. Boundary Case Scenarios ---
+[Smallest Valid (Canonical)] Initial zero weights with target=1: score=0 -> pred=0 -> update to weights [1,2], bias 1
+  Score: 0.0 -> Pred: 0 (Target: 1)
+  New Weights: (1.0, 2.0), New Bias: 1.0
+[Boundary (Exact Zero Tie)] Zero score with target=0: score=0 -> pred=0 -> target=0, zero error, NO update
+  Score: 0.0 -> Pred: 0 (Target: 0)
+  New Weights: (0.0, 0.0), New Bias: 0.0
+[Boundary (Near Zero Positive)] Score slightly positive (+1e-9): score > 0 -> pred=1
+  Score: 1e-09 -> Pred: 1 (Target: 1)
+  New Weights: (1e-09, 0.0), New Bias: 0.0
+[Boundary (Near Zero Negative)] Score slightly negative (-1e-9): score <= 0 -> pred=0
+  Score: -1e-09 -> Pred: 0 (Target: 0)
+  New Weights: (-1e-09, 0.0), New Bias: 0.0
+[Boundary (Negative Update Direction)] Target=0, prediction=1: error=-1, weights decrease by lr*x
+  Score: 3.0 -> Pred: 1 (Target: 0)
+  New Weights: (0.5, 0.0), New Bias: -0.5

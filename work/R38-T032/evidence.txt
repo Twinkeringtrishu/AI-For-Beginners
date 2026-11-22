@@ -1,0 +1,15 @@
+Task ID: R38-T032
+Description: Implement one perceptron prediction/update step on a 2D fixture with a documented zero-score tie rule.
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/3-NeuralNetworks/04-OwnFramework/applied-labs/r38-t032 -p "test_*.py"
+
+Canonical Fixture & Results:
+- Weights: [0, 0], Bias: 0, Input: [1, 2], Target: 1, Learning Rate: 1.0
+- Initial Score: 0.0 -> Prediction: 0 (Tie rule: score <= 0 -> 0)
+- Expected Output: weights [1.0, 2.0], bias 1.0
+- Actual Output: weights (1.0, 2.0), bias 1.0 (PASS)
+
+Test Suite Execution:
+Ran 14 tests in 0.001s
+Status: PASS (0 failures, 0 errors)

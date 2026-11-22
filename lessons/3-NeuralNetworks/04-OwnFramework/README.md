@@ -84,3 +84,20 @@ In this lab, you are asked to use the framework you constructed in this lesson t
 
 * [Instructions](lab/README.md)
 * [Notebook](lab/MyFW_MNIST.ipynb)
+
+## Applied Lab: Single Perceptron Update — Boundary-Case Lesson Extension (R38-T032)
+
+An applied concept example demonstrating a single perceptron prediction and weight update step with a documented zero-score tie rule and boundary cases is available in [applied-labs/r38-t032/example.py](applied-labs/r38-t032/example.py) and documented in [applied-labs/r38-t032/README.md](applied-labs/r38-t032/README.md).
+
+- **Scope & Limitations**: Minimal educational demonstration using the Python standard library. Focuses on the elementary building block of weighted score computation and single-step perceptron parameter updates on bounded 2D fixtures.
+- **Fixture**:
+  - Initial weights: `[0, 0]`, bias: `0`, learning rate: `1`
+  - Input sample: `[1, 2]`, target: `1`
+  - Initial prediction: `0` (via zero-score tie rule: `score <= 0 -> 0`)
+  - Updated state: weights `[1.0, 2.0]`, bias `1.0`
+- **Invocation**:
+  ```bash
+  python3 lessons/3-NeuralNetworks/04-OwnFramework/applied-labs/r38-t032/example.py
+  python3 -m unittest discover -s lessons/3-NeuralNetworks/04-OwnFramework/applied-labs/r38-t032 -p "test_*.py"
+  ```
+

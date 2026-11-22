@@ -1,0 +1,33 @@
+test_canonical_stated_scenario (test_example.TestSinglePerceptronUpdate.test_canonical_stated_scenario)
+Stated scenario: ... ok
+test_catalog_boundary_cases_pass (test_example.TestSinglePerceptronUpdate.test_catalog_boundary_cases_pass)
+Verify that every catalogued boundary case passes its declared expectations. ... ok
+test_correct_prediction_no_update (test_example.TestSinglePerceptronUpdate.test_correct_prediction_no_update)
+When prediction matches target (error=0), weights and bias remain unchanged. ... ok
+test_deliberate_wrong_result_fails (test_example.TestSinglePerceptronUpdate.test_deliberate_wrong_result_fails)
+Verify that a deliberate wrong result makes the test fail. ... ok
+test_dimension_mismatch_raises_value_error (test_example.TestSinglePerceptronUpdate.test_dimension_mismatch_raises_value_error)
+Input vectors with length != 2 must raise ValueError. ... ok
+test_empty_input_raises_value_error (test_example.TestSinglePerceptronUpdate.test_empty_input_raises_value_error)
+Empty input vector raises ValueError. ... ok
+test_invalid_learning_rate_raises_error (test_example.TestSinglePerceptronUpdate.test_invalid_learning_rate_raises_error)
+Learning rates <= 0 or non-finite must raise ValueError. ... ok
+test_invalid_target_type_raises_type_error (test_example.TestSinglePerceptronUpdate.test_invalid_target_type_raises_type_error)
+Non-integer targets (floats, booleans, strings) must raise TypeError. ... ok
+test_near_zero_boundary_decisions (test_example.TestSinglePerceptronUpdate.test_near_zero_boundary_decisions)
+Test boundary threshold decisions for positive and negative epsilons. ... ok
+test_negative_error_update (test_example.TestSinglePerceptronUpdate.test_negative_error_update)
+When target is 0 and prediction is 1, error is -1, reducing weights and bias. ... ok
+test_non_binary_target_raises_value_error (test_example.TestSinglePerceptronUpdate.test_non_binary_target_raises_value_error)
+Non-binary integer targets (e.g. 2, -1) must raise ValueError. ... ok
+test_non_finite_input_raises_value_error (test_example.TestSinglePerceptronUpdate.test_non_finite_input_raises_value_error)
+Inputs containing NaN or Infinity must raise ValueError. ... ok
+test_non_numeric_input_raises_type_error (test_example.TestSinglePerceptronUpdate.test_non_numeric_input_raises_type_error)
+Inputs containing non-numeric values must raise TypeError. ... ok
+test_zero_score_tie_rule_predicts_zero (test_example.TestSinglePerceptronUpdate.test_zero_score_tie_rule_predicts_zero)
+Documented zero-score tie rule: exact zero score breaks ties toward 0. ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
