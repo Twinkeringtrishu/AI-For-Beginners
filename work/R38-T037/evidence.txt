@@ -1,0 +1,17 @@
+Task ID: R38-T037
+Description: Cosine-similarity lookup — failure and recovery example [lessons/5-NLP/15-LanguageModeling]
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/5-NLP/15-LanguageModeling/applied-labs/r38-t037 -p "test_*.py" -v
+
+Canonical Fixtures & Results:
+- [1, 0] vs [1, 0]: Expected = 1.0, Actual = 1.0 (PASS)
+- [1, 0] vs [0, 1]: Expected = 0.0, Actual = 0.0 (PASS)
+- [1, 0] vs [0, 0] (Zero vector): Expected Sentinel = None, Actual = None (PASS)
+- [1, 0] vs [1, 0, 99] (Dimension mismatch): ValueError caught and explained (PASS)
+- [0, 1] vs [0, 1] (Subsequent valid input): Recovered = True, Result = 1.0 (PASS)
+
+Test Suite Execution:
+Ran 12 tests in 0.001s
+Status: PASS (0 failures, 0 errors)
+Deliberate Wrong Result Test: Verified failure via AssertionError in test_deliberate_wrong_result_fails.

@@ -41,3 +41,29 @@ In the previous lesson we have seen that words embeddings work like magic! Now w
 ## 🚀 [Assignment: Train Skip-Gram Model](lab/README.md)
 
 In the lab, we challenge you to modify the code from this lesson to train skip-gram model instead of CBoW. [Read the details](lab/README.md)
+
+## Applied Lab – R38-T037: Cosine-Similarity Lookup — Failure and Recovery Example
+
+An applied lab demonstrating vector normalization, cosine similarity lookup, explicit zero-vector sentinel handling, and error recovery in sequence processing.
+
+- **Lab Directory**: [applied-labs/r38-t037/](applied-labs/r38-t037/README.md)
+- **Implementation**: [example.py](applied-labs/r38-t037/example.py)
+- **Unit Tests**: [test_example.py](applied-labs/r38-t037/test_example.py)
+- **Scope & Disclaimer**: Self-contained mathematical demonstration using standard library primitives; does not load external large embedding tables or use GPU hardware.
+
+### Canonical Fixtures & Contract
+- `[1, 0]` vs `[1, 0]` $\rightarrow$ `1.0` (Identical)
+- `[1, 0]` vs `[0, 1]` $\rightarrow$ `0.0` (Orthogonal)
+- `[1, 0]` vs `[0, 0]` $\rightarrow$ `None` (Zero-norm sentinel)
+- `[1, 0]` vs `[1, 0, 99]` $\rightarrow$ Error caught & explained (Dimension mismatch)
+- `[0, 1]` vs `[0, 1]` $\rightarrow$ `1.0` (**Recovered** on next valid input)
+
+### Invocation & Testing
+```bash
+# Run the failure and recovery demonstration pipeline
+python3 lessons/5-NLP/15-LanguageModeling/applied-labs/r38-t037/example.py
+
+# Run the test suite
+python3 -m unittest discover -s lessons/5-NLP/15-LanguageModeling/applied-labs/r38-t037 -p "test_*.py" -v
+```
+
