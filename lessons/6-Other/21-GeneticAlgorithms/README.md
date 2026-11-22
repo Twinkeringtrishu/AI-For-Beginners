@@ -75,3 +75,27 @@ Hints:
 1. As a gene, consider using the list of root values
 
 Use [Diophantine.ipynb](Diophantine.ipynb) as a starting point.
+
+## Applied Lab – R38-T039: One Genetic-Selection Round — Scenario Assessment
+
+An applied concept lab demonstrating deterministic fitness ranking, elite selection, and tie-breaking on immutable candidate records.
+
+- **Lab Directory**: [applied-labs/r38-t039/](applied-labs/r38-t039/README.md)
+- **Implementation**: [example.py](applied-labs/r38-t039/example.py)
+- **Unit Tests**: [test_example.py](applied-labs/r38-t039/test_example.py)
+- **Scope & Disclaimer**: Single-round discrete elite selection; does not implement crossover, mutation, or multi-generation training.
+
+### Canonical Fixtures & Evaluation
+- Population: $A=3, B=8, C=5$ with `elite_count=2` $\rightarrow$ selects $B$ (fitness 8) and $C$ (fitness 5).
+- Ties broken by candidate ID (lexicographic order).
+- `elite_count > len(population)` rejected with `ValueError`.
+
+### Invocation & Testing
+```bash
+# Run the scenario assessment
+python3 lessons/6-Other/21-GeneticAlgorithms/applied-labs/r38-t039/example.py
+
+# Run unit tests
+python3 -m unittest discover -s lessons/6-Other/21-GeneticAlgorithms/applied-labs/r38-t039 -p "test_*.py" -v
+```
+

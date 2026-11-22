@@ -1,0 +1,15 @@
+R38-T039: One genetic-selection round — scenario assessment
+Lesson: lessons/6-Other/21-GeneticAlgorithms
+
+=== Files Created ===
+1. example.py   — Implementation of Candidate, rank_by_fitness, select_elites, get_scenario_assessment, main
+2. test_example.py — 12 unit tests verifying fitness ranking, tie breaking, bounds, exceptions, and deliberate wrong result guard
+3. README.md    — Lab documentation and 3-question scenario assessment table
+4. lessons/6-Other/21-GeneticAlgorithms/README.md — Linked section
+
+=== Test Results ===
+All 12 tests passed (OK).
+
+=== Execution Evidence ===
+Ran example.py; produced structured JSON and scenario assessment in work/R38-T039/example_run.txt.
+Ran unittest; output preserved in work/R38-T039/test_run.txt.

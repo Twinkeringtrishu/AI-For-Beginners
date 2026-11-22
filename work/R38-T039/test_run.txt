@@ -1,0 +1,29 @@
+test_canonical_elite_selection_b_c (test_example.TestGeneticSelectionRound.test_canonical_elite_selection_b_c)
+Fitness A=3,B=8,C=5 with elite_count=2 selects B then C. ... ok
+test_canonical_non_elites (test_example.TestGeneticSelectionRound.test_canonical_non_elites)
+With elite_count=2, non-elites contains only A. ... ok
+test_canonical_total_reward_one (test_example.TestGeneticSelectionRound.test_canonical_total_reward_one)
+Elite B has fitness 8 (highest), C has fitness 5. ... ok
+test_deliberate_wrong_result_fails (test_example.TestGeneticSelectionRound.test_deliberate_wrong_result_fails)
+A wrong expected elite list must not match the actual result. ... ok
+test_elite_count_exceeds_population_raises (test_example.TestGeneticSelectionRound.test_elite_count_exceeds_population_raises)
+elite_count > population size raises ValueError. ... ok
+test_elite_count_full_population (test_example.TestGeneticSelectionRound.test_elite_count_full_population)
+elite_count == population size: all are elites, no non-elites. ... ok
+test_elite_count_zero (test_example.TestGeneticSelectionRound.test_elite_count_zero)
+elite_count=0 returns empty elites, all as non-elites. ... ok
+test_invalid_elite_count_type_raises (test_example.TestGeneticSelectionRound.test_invalid_elite_count_type_raises)
+Non-int elite_count (float, str, bool) raises TypeError. ... ok
+test_negative_elite_count_raises (test_example.TestGeneticSelectionRound.test_negative_elite_count_raises)
+Negative elite_count raises ValueError. ... ok
+test_rank_by_fitness_descending (test_example.TestGeneticSelectionRound.test_rank_by_fitness_descending)
+rank_by_fitness returns B, C, A in that order. ... ok
+test_scenario_assessment_contains_key_phrases (test_example.TestGeneticSelectionRound.test_scenario_assessment_contains_key_phrases)
+Scenario assessment report includes Q1, Q2, Q3 and disclaimer. ... ok
+test_tie_broken_by_candidate_id (test_example.TestGeneticSelectionRound.test_tie_broken_by_candidate_id)
+Equal fitness: lower ID comes first (lexicographic). ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK

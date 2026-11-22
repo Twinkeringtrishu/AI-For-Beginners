@@ -1,0 +1,56 @@
+====================================================================
+R38-T039: One Genetic-Selection Round — Scenario Assessment
+====================================================================
+Population size: 3, Elite count: 2
+
+Q1 — Predict output: Who are the elites?
+   Ranked: [('B', 8), ('C', 5), ('A', 3)]
+   Elites: [('B', 8), ('C', 5)]
+
+Q2 — Diagnose failure: What if elite_count > population?
+   elite_count=4 raises ValueError — count beyond population is rejected.
+
+Q3 — Boundary policy: What if two candidates share equal fitness?
+   Ties are broken by candidate_id (lexicographic/ascending order),
+   ensuring deterministic, reproducible selection.
+
+8. Note: Teaching approximation: single-round deterministic fitness ranking and elite selection only. Not a full genetic algorithm or trained model.
+====================================================================
+
+Structured JSON Result:
+{
+  "population": [
+    {
+      "candidate_id": "A",
+      "fitness": 3
+    },
+    {
+      "candidate_id": "B",
+      "fitness": 8
+    },
+    {
+      "candidate_id": "C",
+      "fitness": 5
+    }
+  ],
+  "elite_count": 2,
+  "elites": [
+    {
+      "candidate_id": "B",
+      "fitness": 8
+    },
+    {
+      "candidate_id": "C",
+      "fitness": 5
+    }
+  ],
+  "non_elites": [
+    {
+      "candidate_id": "A",
+      "fitness": 3
+    }
+  ],
+  "disclaimer": "Teaching approximation: single-round deterministic fitness ranking and elite selection only. Not a full genetic algorithm or trained model."
+}
+
+Wrote execution evidence to: /Users/tanishka/.gemini/antigravity/scratch/AI-For-Beginners/work/R38-T039/example_run.txt
