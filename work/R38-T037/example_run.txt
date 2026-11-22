@@ -1,0 +1,43 @@
+==================================================================
+R38-T037: Cosine Similarity Failure & Recovery Pipeline Demo
+==================================================================
+Step 1 | Status: SUCCESS   | Sim: 1.0   
+  Inputs:      vec_a=[1, 0], vec_b=[1, 0]
+  Explanation: Calculated valid cosine similarity: 1.0000.
+
+Step 2 | Status: SUCCESS   | Sim: 0.0   
+  Inputs:      vec_a=[1, 0], vec_b=[0, 1]
+  Explanation: Calculated valid cosine similarity: 0.0000.
+
+Step 3 | Status: UNDEFINED | Sim: None  
+  Inputs:      vec_a=[1, 0], vec_b=[0, 0]
+  Explanation: Zero vector has norm 0.0; cosine similarity direction is undefined -> returned sentinel (None).
+
+Step 4 | Status: ERROR     | Sim: None  
+  Inputs:      vec_a=[1, 0], vec_b=[1, 0, 99]
+  Explanation: Invalid/corrupted data: ValueError: Vector dimension mismatch: 2 vs 3
+
+Step 5 | Status: SUCCESS   | Sim: 1.0    [RECOVERED]
+  Inputs:      vec_a=[0, 1], vec_b=[0, 1]
+  Explanation: Calculated valid cosine similarity: 1.0000.
+
+Persisted evidence to: /Users/tanishka/.gemini/antigravity/scratch/AI-For-Beginners/work/R38-T037/example_run.txt
+match: 2 vs 3",
+    "recovered_from_previous_failure": false
+  },
+  {
+    "step": 5,
+    "vec_a": [
+      0,
+      1
+    ],
+    "vec_b": [
+      0,
+      1
+    ],
+    "status": "SUCCESS",
+    "similarity": 1.0,
+    "explanation": "Calculated valid cosine similarity: 1.0000.",
+    "recovered_from_previous_failure": true
+  }
+]
