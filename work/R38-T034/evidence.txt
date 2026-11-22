@@ -1,0 +1,17 @@
+Task ID: R38-T034
+Description: Dependency-plan validation — invariant and state trace [lessons/6-Other/23-MultiagentSystems]
+Python Version: Python 3.15.2
+Git Version: git version 2.55.0
+Automated Check: python3 -m unittest discover -s lessons/6-Other/23-MultiagentSystems/applied-labs/r38-t034 -p "test_*.py" -v
+
+Canonical Fixture & Results:
+- Plan: A: [], B: [A], C: [B]
+- Expected Order: ["A", "B", "C"], Actual = ["A", "B", "C"] (PASS)
+- Missing Dependency ("X"): ValueError raised (PASS)
+- Cyclic Dependency (A->C->B->A): ValueError raised (PASS)
+- Intermediate State Traced: Captured state snapshots after each step (PASS)
+
+Test Suite Execution:
+Ran 4 tests in 0.001s
+Status: PASS (0 failures, 0 errors)
+Deliberate Wrong Result Test: Verified failure via AssertionError in test_deliberate_failure.

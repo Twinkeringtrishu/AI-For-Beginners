@@ -1,0 +1,39 @@
+Topological order: ['A', 'B', 'C']
+Intermediate states (JSON pretty):
+[
+  {
+    "processed": "A",
+    "order_sofar": [
+      "A"
+    ],
+    "remaining": {
+      "B": [
+        "A"
+      ],
+      "C": [
+        "B"
+      ]
+    }
+  },
+  {
+    "processed": "B",
+    "order_sofar": [
+      "A",
+      "B"
+    ],
+    "remaining": {
+      "C": [
+        "B"
+      ]
+    }
+  },
+  {
+    "processed": "C",
+    "order_sofar": [
+      "A",
+      "B",
+      "C"
+    ],
+    "remaining": {}
+  }
+]

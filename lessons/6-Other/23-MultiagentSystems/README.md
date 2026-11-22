@@ -150,3 +150,30 @@ Take this lesson to the real world and try to conceptualize a multi-agent system
 Review the use of this type of system in industry. Pick a domain such as manufacturing or the video game industry and discover how multi-agent systems can be used to solve unique problems.
 
 ## [NetLogo Assignment](assignment.md)
+
+## Applied Lab – R38‑T034: Task‑Plan Validation & Topological Ordering
+
+This lab demonstrates a tiny dependency‑graph utility that validates a small task plan, detects missing dependencies or cycles, and returns a topological order.  The implementation records the intermediate state after each step of Kahn’s algorithm so that the invariant between the intermediate snapshot and the final order can be tested.
+
+**Invocation**
+```bash
+python3 lessons/6-Other/23-MultiagentSystems/applied-labs/r38-t034/example.py
+```
+The script prints the ordered list and a JSON‑pretty list of intermediate states.
+
+**Test suite**
+```bash
+python3 -m unittest discover -s lessons/6-Other/23-MultiagentSystems/applied-labs/r38-t034 -p "test_*.py"
+```
+The suite includes:
+- a canonical happy‑path test (`A→B→C`),
+- a missing‑dependency check,
+- a cycle‑detection check,
+- a deliberately failing test that expects a non‑existent task (`C`) to illustrate failure handling (the test fails as required).
+
+All evidence files are stored under `work/R38-T034/`:
+- `example_run.txt` – script output,
+- `test_run.txt` – full unittest output,
+- `evidence.txt` – summary of the run, Python version, and Git commit.
+
+*The lab uses only the Python standard library; no external packages, GPUs, or cloud services are required.*
