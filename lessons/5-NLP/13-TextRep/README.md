@@ -71,3 +71,29 @@ Try some other exercises using bag-of-words and different data models. You might
 Practice your skills with text embeddings and bag-of-words techniques on [Microsoft Learn](https://docs.microsoft.com/learn/modules/intro-natural-language-processing-pytorch/?WT.mc_id=academic-77998-cacaste)
 
 ## [Assignment: Notebooks](assignment.md)
+
+## Applied Lab – R38-T036: Token-Budget Preflight — Worked Example with Checks
+
+An applied concept lab demonstrating preflight token-budget checking and prompt truncation reporting before model ingestion.
+
+- **Lab Directory**: [applied-labs/r38-t036/](applied-labs/r38-t036/README.md)
+- **Implementation**: [example.py](applied-labs/r38-t036/example.py)
+- **Unit Tests**: [test_example.py](applied-labs/r38-t036/test_example.py)
+- **Scope & Disclaimer**: Teaching approximation using whitespace tokenization; does not emulate real model subword tokenization (BPE/WordPiece) or cloud service limits.
+
+### Canonical Fixture & Expected Output
+- **Input Text**: `"one two three four"`
+- **Configured Budget**: `3`
+- **Retained Tokens**: `["one", "two", "three"]`
+- **Removed Count**: `1` (`["four"]`)
+- **Negative Budget**: Raises `ValueError`
+
+### Invocation & Testing
+```bash
+# Run the example and generate worked explanation
+python3 lessons/5-NLP/13-TextRep/applied-labs/r38-t036/example.py
+
+# Run the test suite
+python3 -m unittest discover -s lessons/5-NLP/13-TextRep/applied-labs/r38-t036 -p "test_*.py" -v
+```
+

@@ -1,0 +1,29 @@
+test_canonical_stated_contract (test_example.TestTokenBudgetPreflight.test_canonical_stated_contract)
+Budget 3 with 'one two three four' retains [one,two,three] ... ok
+test_deliberate_wrong_result_fails (test_example.TestTokenBudgetPreflight.test_deliberate_wrong_result_fails)
+Verify that a deliberate wrong result makes the test fail. ... ok
+test_empty_input_retains_none (test_example.TestTokenBudgetPreflight.test_empty_input_retains_none)
+Empty input retains none and reports zero removed tokens. ... ok
+test_exact_budget_match (test_example.TestTokenBudgetPreflight.test_exact_budget_match)
+Tokens exactly equal to budget retains all with 0 removed. ... ok
+test_invalid_budget_types_raise_type_error (test_example.TestTokenBudgetPreflight.test_invalid_budget_types_raise_type_error)
+Non-integer budgets (float, str, bool, None) raise TypeError. ... ok
+test_invalid_text_type_raises_type_error (test_example.TestTokenBudgetPreflight.test_invalid_text_type_raises_type_error)
+Non-string text inputs raise TypeError. ... ok
+test_reject_negative_budget (test_example.TestTokenBudgetPreflight.test_reject_negative_budget)
+Negative budget raises ValueError. ... ok
+test_teaching_disclaimer_labeled (test_example.TestTokenBudgetPreflight.test_teaching_disclaimer_labeled)
+Label the tokenizer as a teaching approximation, not a real model tokenizer. ... ok
+test_under_budget (test_example.TestTokenBudgetPreflight.test_under_budget)
+Tokens fewer than budget retains all without truncation. ... ok
+test_whitespace_only_input (test_example.TestTokenBudgetPreflight.test_whitespace_only_input)
+Whitespace-only strings evaluate to zero tokens. ... ok
+test_worked_explanation_regression (test_example.TestTokenBudgetPreflight.test_worked_explanation_regression)
+Regression test: Verify worked explanation text and execution match ... ok
+test_zero_budget (test_example.TestTokenBudgetPreflight.test_zero_budget)
+Budget 0 retains no tokens and removes all tokens. ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
