@@ -1,0 +1,64 @@
+Canonical Contract 1: [right, right]
+  Final State: 2, Total Reward: 1, Steps: 2
+
+Canonical Contract 2: Repeated left capped at 5 steps
+  Final State: 0, Total Reward: 0, Steps: 5, Truncated: True
+
+==========================================================================
+R38-T038: Three Controlled Configurations Evaluation & Trade-off Analysis
+==========================================================================
+Configuration                    | Steps | Reward | Goal? | Efficiency
+--------------------------------------------------------------------------
+Config-A (Optimal Greedy)        | 2     | 1      | True  | 0.500     
+Config-B (Hesitant / Exploration) | 4     | 1      | True  | 0.250     
+Config-C (Left-Biased / Adversarial) | 5     | 0      | False | 0.000     
+--------------------------------------------------------------------------
+Observed Trade-offs:
+1. Correctness: Config-A achieves the optimal policy contract ([right, right] -> state 2, reward 1).
+2. Exploration vs Speed: Config-B reaches the goal despite a temporary backtrack (efficiency 0.250 vs 0.500).
+3. Horizon Safety: Config-C safely caps run at 5 steps, preventing infinite loops on non-terminating policies.
+4. Simulation Disclaimer: Pure algorithmic evaluation; does not represent trained model inference accuracy.
+==========================================================================
+
+Wrote execution evidence to: /Users/tanishka/.gemini/antigravity/scratch/AI-For-Beginners/work/R38-T038/example_run.txt
+ 5,
+    "steps_taken": 2,
+    "final_state": 2,
+    "total_reward": 1,
+    "reached_goal": true,
+    "sample_efficiency": 0.5
+  },
+  {
+    "config_name": "Config-B (Hesitant / Exploration)",
+    "description": "Path with backtrack before recovering to goal: ['right', 'left', 'right', 'right'].",
+    "action_sequence": [
+      "right",
+      "left",
+      "right",
+      "right"
+    ],
+    "max_steps": 5,
+    "steps_taken": 4,
+    "final_state": 2,
+    "total_reward": 1,
+    "reached_goal": true,
+    "sample_efficiency": 0.25
+  },
+  {
+    "config_name": "Config-C (Left-Biased / Adversarial)",
+    "description": "Repeated 'left' actions stuck at lower boundary until capped at max_steps (5).",
+    "action_sequence": [
+      "left",
+      "left",
+      "left",
+      "left",
+      "left"
+    ],
+    "max_steps": 5,
+    "steps_taken": 5,
+    "final_state": 0,
+    "total_reward": 0,
+    "reached_goal": false,
+    "sample_efficiency": 0.0
+  }
+]

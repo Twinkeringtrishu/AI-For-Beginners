@@ -112,3 +112,27 @@ Watch [this great video](https://www.youtube.com/watch?v=qv6UVOQ0F44) talking ab
 ## Assignment: [Train a Mountain Car](lab/README.md)
 
 Your goal during this assignment would be to train a different Gym environment - [Mountain Car](https://www.gymlibrary.ml/environments/classic_control/mountain_car/).
+
+## Applied Lab – R38-T038: Finite-State Reward Trace — Evaluation Experiment
+
+An applied concept lab demonstrating state transitions, sparse terminal rewards, and step-cap bounds in a 3-state chain MDP.
+
+- **Lab Directory**: [applied-labs/r38-t038/](applied-labs/r38-t038/README.md)
+- **Implementation**: [example.py](applied-labs/r38-t038/example.py)
+- **Unit Tests**: [test_example.py](applied-labs/r38-t038/test_example.py)
+- **Scope & Disclaimer**: Lightweight discrete MDP simulation for learning transition dynamics; does not require OpenAI Gym, GPUs, or deep learning frameworks.
+
+### Canonical Fixtures & Evaluation
+- `[right, right]` from state 0 $\rightarrow$ terminates at state 2 with total reward 1.
+- Repeated `left` $\rightarrow$ bounded at state 0 and truncated at 5 steps with total reward 0.
+- Compares 3 controlled policies (Greedy Right, Hesitant Backtrack, Left-Biased) on sample efficiency ($\text{Reward} / \text{Steps}$).
+
+### Invocation & Testing
+```bash
+# Run the evaluation experiment
+python3 lessons/6-Other/22-DeepRL/applied-labs/r38-t038/example.py
+
+# Run unit tests
+python3 -m unittest discover -s lessons/6-Other/22-DeepRL/applied-labs/r38-t038 -p "test_*.py" -v
+```
+

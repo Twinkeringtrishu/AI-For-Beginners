@@ -1,0 +1,29 @@
+test_backtracking_path (test_example.TestFiniteStateRewardTrace.test_backtracking_path)
+Path ['right', 'left', 'right', 'right'] reaches goal at step 4. ... ok
+test_canonical_repeated_left_ends_at_step_cap_with_reward_zero (test_example.TestFiniteStateRewardTrace.test_canonical_repeated_left_ends_at_step_cap_with_reward_zero)
+Repeated left ends at the step cap with reward 0. ... ok
+test_canonical_right_right_ends_at_two_with_reward_one (test_example.TestFiniteStateRewardTrace.test_canonical_right_right_ends_at_two_with_reward_one)
+From state 0, [right, right] ends at 2 with total reward 1. ... ok
+test_custom_step_cap_truncation (test_example.TestFiniteStateRewardTrace.test_custom_step_cap_truncation)
+Capping episode at 3 steps cuts off a 4-step sequence. ... ok
+test_deliberate_wrong_result_fails (test_example.TestFiniteStateRewardTrace.test_deliberate_wrong_result_fails)
+Verify that a deliberate wrong result makes the test fail. ... ok
+test_episode_terminates_immediately_at_state_two (test_example.TestFiniteStateRewardTrace.test_episode_terminates_immediately_at_state_two)
+Excess actions after reaching terminal state are ignored. ... ok
+test_invalid_action_raises_value_error (test_example.TestFiniteStateRewardTrace.test_invalid_action_raises_value_error)
+Unrecognized actions raise ValueError. ... ok
+test_invalid_action_type_raises_type_error (test_example.TestFiniteStateRewardTrace.test_invalid_action_type_raises_type_error)
+Non-string actions raise TypeError. ... ok
+test_invalid_step_cap_raises_value_error (test_example.TestFiniteStateRewardTrace.test_invalid_step_cap_raises_value_error)
+Non-positive max_steps raise ValueError. ... ok
+test_left_boundary_clamped_at_zero (test_example.TestFiniteStateRewardTrace.test_left_boundary_clamped_at_zero)
+Action 'left' at state 0 stays at state 0. ... ok
+test_single_step_right_moves_to_one_no_reward (test_example.TestFiniteStateRewardTrace.test_single_step_right_moves_to_one_no_reward)
+A single 'right' from 0 reaches 1 with 0 reward. ... ok
+test_three_configurations_comparison_and_tradeoffs (test_example.TestFiniteStateRewardTrace.test_three_configurations_comparison_and_tradeoffs)
+Focus: Compare three small controlled configurations using sample efficiency ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
