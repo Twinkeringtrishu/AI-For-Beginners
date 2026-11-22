@@ -1,0 +1,15 @@
+R38-T040: Token-budget preflight — offline service adapter
+Lesson: lessons/5-NLP/17-GenerativeNetworks
+
+=== Files Created ===
+1. example.py   — Implementation of OfflineTokenBudgetAdapter behind a callable TokenizerFn interface
+2. test_example.py — 12 unit tests verifying canonical behavior, bounds, types, disclaimer, and deliberate wrong result guard
+3. README.md    — Lab documentation with adapter architecture and disclaimer of mock limitations
+4. lessons/5-NLP/17-GenerativeNetworks/README.md — Linked section
+
+=== Test Results ===
+All 12 tests passed (OK).
+
+=== Execution Evidence ===
+Ran example.py; produced structured JSON and human-readable explanation in work/R38-T040/example_run.txt.
+Ran unittest; output preserved in work/R38-T040/test_run.txt.

@@ -1,0 +1,29 @@
+test_adapter_name_exposed (test_example.TestOfflineTokenBudgetAdapter.test_adapter_name_exposed)
+Adapter name is accessible on result. ... ok
+test_canonical_budget_3_retains_first_three (test_example.TestOfflineTokenBudgetAdapter.test_canonical_budget_3_retains_first_three)
+Budget 3 with 'one two three four' retains [one,two,three], removes 1. ... ok
+test_deliberate_wrong_result_fails (test_example.TestOfflineTokenBudgetAdapter.test_deliberate_wrong_result_fails)
+A wrong expected retained list must not match actual. ... ok
+test_disclaimer_present_and_correct (test_example.TestOfflineTokenBudgetAdapter.test_disclaimer_present_and_correct)
+Every result carries the full teaching disclaimer. ... ok
+test_empty_input_retains_none (test_example.TestOfflineTokenBudgetAdapter.test_empty_input_retains_none)
+Empty string: no tokens retained, nothing removed. ... ok
+test_exact_budget_match_no_truncation (test_example.TestOfflineTokenBudgetAdapter.test_exact_budget_match_no_truncation)
+When token count == budget, is_truncated is False. ... ok
+test_invalid_budget_type_raises_type_error (test_example.TestOfflineTokenBudgetAdapter.test_invalid_budget_type_raises_type_error)
+Non-int budget (float, str, bool, None) raises TypeError. ... ok
+test_invalid_text_type_raises_type_error (test_example.TestOfflineTokenBudgetAdapter.test_invalid_text_type_raises_type_error)
+Non-str text raises TypeError. ... ok
+test_negative_budget_raises_value_error (test_example.TestOfflineTokenBudgetAdapter.test_negative_budget_raises_value_error)
+Negative budget raises ValueError. ... ok
+test_under_budget_all_retained (test_example.TestOfflineTokenBudgetAdapter.test_under_budget_all_retained)
+Fewer tokens than budget: all retained, nothing removed. ... ok
+test_worked_explanation_regression (test_example.TestOfflineTokenBudgetAdapter.test_worked_explanation_regression)
+Worked explanation contains canonical expected substrings. ... ok
+test_zero_budget_removes_all (test_example.TestOfflineTokenBudgetAdapter.test_zero_budget_removes_all)
+Zero budget retains nothing. ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK

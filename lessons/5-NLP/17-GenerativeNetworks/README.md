@@ -74,3 +74,27 @@ Here are some articles to expand your knowledge
 ## [Assignment](lab/README.md)
 
 We have seen how to generate text character-by-character. In the lab, you will explore word-level text generation.
+
+## Applied Lab – R38-T040: Token-Budget Preflight — Offline Service Adapter
+
+An applied concept lab demonstrating prompt preflight validation and budget checks behind a callable offline service adapter interface.
+
+- **Lab Directory**: [applied-labs/r38-t040/](applied-labs/r38-t040/README.md)
+- **Implementation**: [example.py](applied-labs/r38-t040/example.py)
+- **Unit Tests**: [test_example.py](applied-labs/r38-t040/test_example.py)
+- **Scope & Disclaimer**: Lightweight local adapter using whitespace tokenization; does not connect to external LLM cloud services or perform subword/BPE tokenization.
+
+### Canonical Fixtures & Evaluation
+- Prompt `"one two three four"` with budget `3` $\rightarrow$ retains `['one', 'two', 'three']`, removes `1` (`'four'`), truncated `True`.
+- Empty prompt `""` $\rightarrow$ retains `[]`, removes `0`.
+- Negative budget $\rightarrow$ rejected with `ValueError`.
+
+### Invocation & Testing
+```bash
+# Run the worked example
+python3 lessons/5-NLP/17-GenerativeNetworks/applied-labs/r38-t040/example.py
+
+# Run unit tests
+python3 -m unittest discover -s lessons/5-NLP/17-GenerativeNetworks/applied-labs/r38-t040 -p "test_*.py" -v
+```
+
