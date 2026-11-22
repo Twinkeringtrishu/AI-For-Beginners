@@ -14,6 +14,23 @@
 
 # Artificial Intelligence for Beginners - A Curriculum
 
+> ### 🎓 Student Coursework Completion: Tanishka (@Twinkeringtrishu)
+> **Status: All 10 Assigned Tasks Completed & Verified (R38-T031 – R38-T040)**
+>
+> | Task ID | Topic & Lesson | Status | Coursework Pull Request |
+> |:---|:---|:---:|:---:|
+> | **R38-T031** | Cosine similarity concept (`lessons/5-NLP/14-Embeddings`) | ✅ Complete | [PR #91](https://github.com/S-AI-Projects/AI-For-Beginners/pull/91) |
+> | **R38-T032** | Single perceptron update (`lessons/3-NeuralNetworks/04-OwnFramework`) | ✅ Complete | [PR #92](https://github.com/S-AI-Projects/AI-For-Beginners/pull/92) |
+> | **R38-T033** | Segmentation mask overlap (`lessons/4-ComputerVision/12-Segmentation`) | ✅ Complete | [PR #93](https://github.com/S-AI-Projects/AI-For-Beginners/pull/93) |
+> | **R38-T034** | Dependency plan validation (`lessons/6-Other/23-MultiagentSystems`) | ✅ Complete | [PR #96](https://github.com/S-AI-Projects/AI-For-Beginners/pull/96) |
+> | **R38-T035** | Prompt template escaping (`lessons/5-NLP/20-LangModels`) | ✅ Complete | [PR #97](https://github.com/S-AI-Projects/AI-For-Beginners/pull/97) |
+> | **R38-T036** | Token-budget preflight (`lessons/5-NLP/13-TextRep`) | ✅ Complete | [PR #94](https://github.com/S-AI-Projects/AI-For-Beginners/pull/94) |
+> | **R38-T037** | Cosine similarity recovery (`lessons/5-NLP/15-LanguageModeling`) | ✅ Complete | [PR #95](https://github.com/S-AI-Projects/AI-For-Beginners/pull/95) |
+> | **R38-T038** | Finite-state reward trace (`lessons/6-Other/22-DeepRL`) | ✅ Complete | [PR #100](https://github.com/S-AI-Projects/AI-For-Beginners/pull/100) |
+> | **R38-T039** | One genetic-selection round (`lessons/6-Other/21-GeneticAlgorithms`) | ✅ Complete | [PR #102](https://github.com/S-AI-Projects/AI-For-Beginners/pull/102) |
+> | **R38-T040** | Token-budget service adapter (`lessons/5-NLP/17-GenerativeNetworks`) | ✅ Complete | [PR #101](https://github.com/S-AI-Projects/AI-For-Beginners/pull/101) |
+
+
 |![Sketchnote by @girlie_mac https://twitter.com/girlie_mac](https://github.com/microsoft/AI-For-Beginners/raw/main/lessons/sketchnotes/ai-overview.png)|
 |:---:|
 | AI For Beginners - _Sketchnote by [@girlie_mac](https://twitter.com/girlie_mac)_ |
